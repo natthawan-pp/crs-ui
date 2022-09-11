@@ -1,0 +1,1000 @@
+<div class="layout-topbar">
+  <a routerlink="" class="layout-topbar-logo" href="#/">
+    <span>COURSE RECOMENDATION</span>
+  </a>
+</div>
+<br><br>
+
+<div class="page-content">
+  <div class="page-container">
+
+    <p-progressBar [value]="value"></p-progressBar>
+
+    <div
+      *ngIf="showSectionBasicSubject && !showSectionSkillBase && !showSectionPersonality && !showSectionDisplayResult">
+      <p-card>
+        <div style="background-color: #1B262C; color: white">
+          <br><br>
+          <div class="text-center">
+            <b>
+              <h1>ความรู้พื้นฐาน (Basic Subject)</h1>
+            </b>
+          </div>
+          <br><br>
+        </div>
+
+        <div class="ui-g">
+          <div class="ui-g-4" style="text-align: left;">
+          </div>
+          <div class="ui-g-4"></div>
+          <div class="ui-g-4" style="text-align: right;">
+            <!-- <p-button label="Next" icon="pi pi-angle-right" class="p-button-lg" (click)="nextPageToSection2SkillBase()">
+            </p-button> -->
+            <button type="button" class="btn btn-primary btn-lg " style="width: 220px;"
+              (click)="nextPageToSection2SkillBase()">Next</button>&nbsp; &nbsp;
+          </div>
+          <div>
+            <br><br>
+          </div>
+        </div>
+
+
+        <!-- /////////////////////////////////////// -->
+
+        <div class="ui-g">
+          <div class="ui-g-4" style="width:33% !important;">
+            <p-card header="สถิติ">
+              <!-- <div style ="text-align: right;">
+                <label>เลือกทั้งหมด</label> &nbsp; 
+                <p-checkbox [(ngModel)]="selectAll1" [binary]="true" >
+                </p-checkbox>
+              </div> -->
+              <p-scrollPanel [style]="{width: '100%', height: '200px'}" styleClass="custombar1">
+                <div *ngFor="let row of categories1" class="field-checkbox">
+                  <p-checkbox name="group2" value="row" [value]="row" [(ngModel)]="selectedValuesBasicSubject">
+                  </p-checkbox>
+                  &nbsp; &nbsp;
+                  <label>{{row.subject_name_th}}</label>
+                </div>
+              </p-scrollPanel>
+            </p-card>
+
+          </div>
+
+          <div class="ui-g-4" style="width:33% !important;">
+            <p-card header="การแจกแจงความน่าจะเป็นเบื้องต้น">
+              <p-scrollPanel [style]=" {width: '100%' , height: '200px' }" styleClass="custombar1">
+                <div *ngFor="let row of categories8" class="field-checkbox">
+                  <p-checkbox name="group2" value="row" [value]="row" [(ngModel)]="selectedValuesBasicSubject">
+                  </p-checkbox>
+                  &nbsp; &nbsp;
+                  <label>{{row.subject_name_th}}</label>
+                </div>
+              </p-scrollPanel>
+            </p-card>
+          </div>
+
+          <div class="ui-g-4" style="width:33% !important;">
+            <p-card header="ลำดับและอนุกรม">
+              <p-scrollPanel [style]=" {width: '100%' , height: '200px' }" styleClass="custombar1">
+                <div *ngFor="let row of categories5" class="field-checkbox">
+                  <p-checkbox name="group2" value="row" [value]="row" [(ngModel)]="selectedValuesBasicSubject">
+                  </p-checkbox>
+                  &nbsp; &nbsp;
+                  <label>{{row.subject_name_th}}</label>
+                </div>
+              </p-scrollPanel>
+            </p-card>
+          </div>
+
+        </div>
+
+        <!-- /////////////////////////////////////////////////////////////////////////// -->
+
+        <div class="ui-g">
+
+          <div class="ui-g-4" style="width:33% !important;">
+            <p-card header="แคลคูลัส">
+              <p-scrollPanel [style]=" {width: '100%' , height: '200px' }" styleClass="custombar1">
+                <div *ngFor="let row of categories9" class="field-checkbox">
+                  <p-checkbox name="group2" value="row" [value]="row" [(ngModel)]="selectedValuesBasicSubject">
+                  </p-checkbox>
+                  &nbsp; &nbsp;
+                  <label>{{row.subject_name_th}}</label>
+                </div>
+              </p-scrollPanel>
+            </p-card>
+          </div>
+
+          <div class="ui-g-4" style="width:33% !important;">
+            <p-card header="เรขาคณิตวิเคราะห์">
+              <p-scrollPanel [style]="{width: '100%', height: '200px'}" styleClass="custombar1">
+                <div *ngFor="let row of categories2" class="field-checkbox">
+                  <p-checkbox name="group2" value="row" [value]="row" [(ngModel)]="selectedValuesBasicSubject">
+                  </p-checkbox>
+                  &nbsp; &nbsp;
+                  <label>{{row.subject_name_th}}</label>
+                </div>
+              </p-scrollPanel>
+            </p-card>
+          </div>
+
+          <div class="ui-g-4" style="width:33% !important;">
+            <p-card header="เซต">
+              <p-scrollPanel [style]="{width: '100%', height: '200px'}" styleClass="custombar1">
+                <div *ngFor="let row of categories15" class="field-checkbox">
+                  <p-checkbox name="group2" value="row" [value]="row" [(ngModel)]="selectedValuesBasicSubject">
+                  </p-checkbox>
+                  &nbsp; &nbsp;
+                  <label>{{row.subject_name_th}}</label>
+                </div>
+              </p-scrollPanel>
+            </p-card>
+          </div>
+
+        </div>
+
+
+        <!-- /////////////////////////////////////////////////////////////////////////// -->
+
+        <div class="ui-g">
+
+          <div class="ui-g-4" style="width:33% !important;">
+            <p-card header="ตรรกศาสตร์">
+              <p-scrollPanel [style]=" {width: '100%' , height: '200px' }" styleClass="custombar1">
+                <div *ngFor="let row of categories7" class="field-checkbox">
+                  <p-checkbox name="group2" value="row" [value]="row" [(ngModel)]="selectedValuesBasicSubject">
+                  </p-checkbox>
+                  &nbsp; &nbsp;
+                  <label>{{row.subject_name_th}}</label>
+                </div>
+              </p-scrollPanel>
+            </p-card>
+          </div>
+
+          <div class="ui-g-4" style="width:33% !important;">
+            <p-card header="จำนวนจริงและพหุนาม">
+              <p-scrollPanel [style]="{width: '100%', height: '200px'}" styleClass="custombar1">
+                <div *ngFor="let row of categories4" class="field-checkbox">
+                  <p-checkbox name="group2" value="row" [value]="row" [(ngModel)]="selectedValuesBasicSubject">
+                  </p-checkbox>
+                  &nbsp; &nbsp;
+                  <label>{{row.subject_name_th}}</label>
+                </div>
+              </p-scrollPanel>
+            </p-card>
+          </div>
+
+          <div class="ui-g-4" style="width:33% !important;">
+            <p-card header="ฟังก์ชัน">
+              <p-scrollPanel [style]=" {width: '100%' , height: '200px' }" styleClass="custombar1">
+                <div *ngFor="let row of categories6" class="field-checkbox">
+                  <p-checkbox name="group2" value="row" [value]="row" [(ngModel)]="selectedValuesBasicSubject">
+                  </p-checkbox>
+                  &nbsp; &nbsp;
+                  <label>{{row.subject_name_th}}</label>
+                </div>
+              </p-scrollPanel>
+            </p-card>
+          </div>
+
+        </div>
+
+        <!-- /////////////////////////////////////////////////////////////////////////// -->
+
+        <div class="ui-g">
+
+          <div class="ui-g-4" style="width:33% !important;">
+            <p-card header="ฟังก์ชัน ตรีโกณมิติ">
+              <p-scrollPanel [style]=" {width: '100%' , height: '200px' }" styleClass="custombar1">
+                <div *ngFor="let row of categories11" class="field-checkbox">
+                  <p-checkbox name="group2" value="row" [value]="row" [(ngModel)]="selectedValuesBasicSubject">
+                  </p-checkbox>
+                  &nbsp; &nbsp;
+                  <label>{{row.subject_name_th}}</label>
+                </div>
+              </p-scrollPanel>
+            </p-card>
+          </div>
+
+          <div class="ui-g-4" style="width:33% !important;">
+            <p-card header="จำนวนเชิงซ้อน">
+              <p-scrollPanel [style]="{width: '100%', height: '200px'}" styleClass="custombar1">
+                <div *ngFor="let row of categories13" class="field-checkbox">
+                  <p-checkbox name="group2" value="row" [value]="row" [(ngModel)]="selectedValuesBasicSubject">
+                  </p-checkbox>
+                  &nbsp; &nbsp;
+                  <label>{{row.subject_name_th}}</label>
+                </div>
+              </p-scrollPanel>
+            </p-card>
+          </div>
+
+          <div class="ui-g-4" style="width:33% !important;">
+            <p-card header="เมทริกซ์">
+              <p-scrollPanel [style]="{width: '100%', height: '200px'}" styleClass="custombar1">
+                <div *ngFor="let row of categories3" class="field-checkbox">
+                  <p-checkbox name="group2" value="row" [value]="row" [(ngModel)]="selectedValuesBasicSubject">
+                  </p-checkbox>
+                  &nbsp; &nbsp;
+                  <label>{{row.subject_name_th}}</label>
+                </div>
+              </p-scrollPanel>
+            </p-card>
+          </div>
+        </div>
+
+        <!-- /////////////////////////////////////////////////////////////////////////// -->
+
+
+        <div class="ui-g">
+
+          <div class="ui-g-4" style="width:33% !important;">
+            <p-card header="เวกเตอร์ในสามมิติ">
+              <p-scrollPanel [style]=" {width: '100%' , height: '200px' }" styleClass="custombar1">
+                <div *ngFor="let row of categories12" class="field-checkbox">
+                  <p-checkbox name="group2" value="row" [value]="row" [(ngModel)]="selectedValuesBasicSubject">
+                  </p-checkbox>
+                  &nbsp; &nbsp;
+                  <label>{{row.subject_name_th}}</label>
+                </div>
+              </p-scrollPanel>
+            </p-card>
+          </div>
+
+          <div class="ui-g-4" style="width:33% !important;">
+            <p-card header="หลักการนับเบื้องต้น">
+              <p-scrollPanel [style]=" {width: '100%' , height: '200px' }" styleClass="custombar1">
+                <div *ngFor="let row of categories10" class="field-checkbox">
+                  <p-checkbox name="group2" value="row" [value]="row" [(ngModel)]="selectedValuesBasicSubject">
+                  </p-checkbox>
+                  &nbsp; &nbsp;
+                  <label>{{row.subject_name_th}}</label>
+                </div>
+              </p-scrollPanel>
+            </p-card>
+          </div>
+
+          <div class="ui-g-4" style="width:33% !important;">
+            <p-card header="ความน่าจะเป็น">
+              <p-scrollPanel [style]="{width: '100%', height: '200px'}" styleClass="custombar1">
+                <div *ngFor="let row of categories14" class="field-checkbox">
+                  <p-checkbox name="group2" value="row" [value]="row" [(ngModel)]="selectedValuesBasicSubject">
+                  </p-checkbox>
+                  &nbsp; &nbsp;
+                  <label>{{row.subject_name_th}}</label>
+                </div>
+              </p-scrollPanel>
+            </p-card>
+          </div>
+
+
+        </div>
+
+
+        <!-- /////////////////////////////////////////////////////////////////////////// -->
+
+        <div class="ui-g">
+          <div class="ui-g-4" style="width:33% !important;">
+            <p-card header="ฟิสิกส์">
+              <p-scrollPanel [style]="{width: '100%', height: '200px'}" styleClass="custombar1">
+                <div *ngFor="let row of categories16" class="field-checkbox">
+                  <p-checkbox name="group2" value="row" [value]="row" [(ngModel)]="selectedValuesBasicSubject">
+                  </p-checkbox>
+                  &nbsp; &nbsp;
+                  <label>{{row.subject_name_th}}</label>
+                </div>
+              </p-scrollPanel>
+            </p-card>
+          </div>
+
+          <div class="ui-g-4" style="width:33% !important;">
+            <p-card header="เคมี">
+              <p-scrollPanel [style]="{width: '100%', height: '200px'}" styleClass="custombar1">
+                <div *ngFor="let row of categories17" class="field-checkbox">
+                  <p-checkbox name="group2" value="row" [value]="row" [(ngModel)]="selectedValuesBasicSubject">
+                  </p-checkbox>
+                  &nbsp; &nbsp;
+                  <label>{{row.subject_name_th}}</label>
+                </div>
+              </p-scrollPanel>
+            </p-card>
+          </div>
+
+          <div class="ui-g-4" style="width:33% !important;">
+            <p-card header="ชีวะ">
+              <p-scrollPanel [style]="{width: '100%', height: '200px'}" styleClass="custombar1">
+                <div *ngFor="let row of categories18" class="field-checkbox">
+                  <p-checkbox name="group2" value="row" [value]="row" [(ngModel)]="selectedValuesBasicSubject">
+                  </p-checkbox>
+                  &nbsp; &nbsp;
+                  <label>{{row.subject_name_th}}</label>
+                </div>
+              </p-scrollPanel>
+            </p-card>
+          </div>
+        </div>
+
+
+      </p-card>
+    </div>
+
+    <!-- ///////////////////////////////////// SKILL BASE SECTION /////////////////////////////////////  -->
+
+    <div
+      *ngIf="showSectionSkillBase && !showSectionBasicSubject && !showSectionPersonality && !showSectionDisplayResult">
+      <p-card>
+        <div style="background-color: #1B262C; color: white">
+          <br><br>
+          <div class="text-center">
+            <b>
+              <h1>ทักษะความสามารถ (Skill Base)</h1>
+            </b>
+          </div>
+          <br><br>
+        </div>
+
+        <div class="ui-g">
+          <div class="ui-g-4" style="text-align: left;">
+            <!-- <p-button label="Back" icon="pi pi-angle-left" class="p-button-lg"
+              (click)="backPageToSection1SubjectBasic()">
+            </p-button> -->
+            <button type="button" class="btn btn-secondary btn-lg" style="width: 220px;"
+              (click)="backPageToSection1SubjectBasic()">Back</button>&nbsp; &nbsp;
+          </div>
+          <div class="ui-g-4"></div>
+          <div class="ui-g-4" style="text-align: right;">
+            <!-- <p-button label="Next" icon="pi pi-angle-right" class="p-button-lg"
+              (click)="nextPageToSection3Personality()">
+            </p-button> -->
+            <button type="button" class="btn btn-primary btn-lg" style="width: 220px;"
+              (click)="nextPageToSection3Personality()">Next</button>&nbsp; &nbsp;
+          </div>
+          <div>
+            <br><br>
+          </div>
+        </div>
+
+
+        <div class="ui-g">
+
+          <div class="ui-g-2" style="width:20% !important;">
+            <p-card header="Coding">
+              <p-scrollPanel [style]="{width: '100%', height: '600px'}" styleClass="custombar1">
+                <div *ngFor="let row of codingList" class="field-checkbox">
+                  <p-checkbox name="group2" value="row" [value]="row" [(ngModel)]="selectedValuesSkillBase">
+                  </p-checkbox>
+                  &nbsp; &nbsp;
+                  <label>{{row.skill_base_en}}</label>
+                </div>
+              </p-scrollPanel>
+            </p-card>
+          </div>
+
+          <div class="ui-g-2">
+            <p-card header="Artificial Intelligence">
+              <p-scrollPanel [style]="{width: '100%', height: '600px'}" styleClass="custombar1">
+                <div *ngFor="let row of artificialIntelligenceList" class="field-checkbox">
+                  <p-checkbox name="group2" value="row" [value]="row" [(ngModel)]="selectedValuesSkillBase">
+                  </p-checkbox>
+                  &nbsp; &nbsp;
+                  <label>{{row.skill_base_en}}</label>
+                </div>
+              </p-scrollPanel>
+            </p-card>
+          </div>
+
+          <div class="ui-g-2" style="width:20% !important;">
+            <p-card header="Practice / Workshop">
+              <p-scrollPanel [style]="{width: '100%', height: '600px'}" styleClass="custombar1">
+                <div *ngFor="let row of practiceWorkshopList" class="field-checkbox">
+                  <p-checkbox name="group2" value="row" [value]="row" [(ngModel)]="selectedValuesSkillBase">
+                  </p-checkbox>
+                  &nbsp; &nbsp;
+                  <label>{{row.skill_base_en}}</label>
+                </div>
+              </p-scrollPanel>
+            </p-card>
+          </div>
+
+          <div class="ui-g-2" style="width:20% !important;">
+            <p-card header="Business">
+              <p-scrollPanel [style]="{width: '100%', height: '600px'}" styleClass="custombar1">
+                <div *ngFor="let row of businessList" class="field-checkbox">
+                  <p-checkbox name="group2" value="row" [value]="row" [(ngModel)]="selectedValuesSkillBase">
+                  </p-checkbox>
+                  &nbsp; &nbsp;
+                  <label>{{row.skill_base_en}}</label>
+                </div>
+              </p-scrollPanel>
+            </p-card>
+          </div>
+
+          <div class="ui-g-2" style="width:20% !important;">
+            <p-card header="Engineer">
+              <p-scrollPanel [style]="{width: '100%', height: '600px'}" styleClass="custombar1">
+                <div *ngFor="let row of engineerList" class="field-checkbox">
+                  <p-checkbox name="group2" value="row" [value]="row" [(ngModel)]="selectedValuesSkillBase">
+                  </p-checkbox>
+                  &nbsp; &nbsp;
+                  <label>{{row.skill_base_en}}</label>
+                </div>
+              </p-scrollPanel>
+            </p-card>
+          </div>
+
+        </div>
+
+
+
+      </p-card>
+    </div>
+
+    <!-- ///////////////////////////////////// PERSONALITY SECTION /////////////////////////////////////  -->
+
+    <div
+      *ngIf="!showSectionSkillBase && !showSectionBasicSubject && showSectionPersonality && !showSectionDisplayResult">
+      <p-card>
+        <div style="background-color: #1B262C; color: white">
+          <br><br>
+          <div class="text-center">
+            <b>
+              <h1>บุคลิกภาพ (Personality)</h1>
+            </b>
+          </div>
+          <br><br>
+        </div>
+
+
+        <div class="ui-g">
+          <div class="ui-g-4" style="text-align: left;">
+            <!-- <p-button label="Back" icon="pi pi-angle-left" class="p-button-lg" (click)="backPageToSection2SkillBase()">
+            </p-button> -->
+            <button type="button" class="btn btn-secondary btn-lg" style="width: 220px;"
+              (click)="backPageToSection2SkillBase()">Back</button>&nbsp; &nbsp;
+          </div>
+          <div class="ui-g-4"></div>
+          <div class="ui-g-4" style="text-align: right;">
+            <!-- <p-button label="Predict" icon="pi pi-angle-right" class="p-button-lg" (click)="onPredict()">
+            </p-button> -->
+            <button type="button" class="btn btn-primary btn-lg" style="width: 220px;" (click)="onPredict()">Show
+              Results</button>&nbsp; &nbsp;
+          </div>
+          <div>
+            <br><br>
+          </div>
+        </div>
+
+
+        <p-card>
+          <div class="ui-g" style="text-align:center; font-size: 16px">
+
+            <!-- //////////////////  1  ///////////////////  -->
+            <div class="ui-g-12" style="padding: 0.2em;">
+              <div class="ui-g-6" style="text-align:right;">
+                <b><label>{{getAllPersonality[0].personality_name_th}}</label></b> &nbsp;&nbsp;
+              </div>
+              <div class="ui-g-6" style="text-align:left;">
+                เห็นด้วย &nbsp;&nbsp;
+                <p-radioButton value="1" label="1" [(ngModel)]="selectedValuesPersonality[0]"></p-radioButton>&nbsp;
+                <p-radioButton value="2" label="2" [(ngModel)]="selectedValuesPersonality[0]"></p-radioButton>&nbsp;
+                <p-radioButton value="3" label="3" [(ngModel)]="selectedValuesPersonality[0]"></p-radioButton>&nbsp;
+                <p-radioButton value="4" label="4" [(ngModel)]="selectedValuesPersonality[0]"></p-radioButton>&nbsp;
+                <p-radioButton value="5" label="5" [(ngModel)]="selectedValuesPersonality[0]"></p-radioButton>&nbsp;
+                <p-radioButton value="6" label="6" [(ngModel)]="selectedValuesPersonality[0]"></p-radioButton>&nbsp;
+                <p-radioButton value="7" label="7" [(ngModel)]="selectedValuesPersonality[0]"></p-radioButton>&nbsp;
+                &nbsp;&nbsp; ไม่เห็นด้วย
+              </div>
+            </div>
+
+            <!-- //////////////////  2  ///////////////////  -->
+            <div class="ui-g-12" style="padding: 0.2em;">
+              <div class="ui-g-6" style="text-align:right;">
+                <b><label>{{getAllPersonality[1].personality_name_th}}</label></b> &nbsp;&nbsp;
+              </div>
+              <div class="ui-g-6" style="text-align:left;">
+                เห็นด้วย &nbsp;&nbsp;
+                <p-radioButton value="1" label="1" [(ngModel)]="selectedValuesPersonality[1]"></p-radioButton>&nbsp;
+                <p-radioButton value="2" label="2" [(ngModel)]="selectedValuesPersonality[1]"></p-radioButton>&nbsp;
+                <p-radioButton value="3" label="3" [(ngModel)]="selectedValuesPersonality[1]"></p-radioButton>&nbsp;
+                <p-radioButton value="4" label="4" [(ngModel)]="selectedValuesPersonality[1]"></p-radioButton>&nbsp;
+                <p-radioButton value="5" label="5" [(ngModel)]="selectedValuesPersonality[1]"></p-radioButton>&nbsp;
+                <p-radioButton value="6" label="6" [(ngModel)]="selectedValuesPersonality[1]"></p-radioButton>&nbsp;
+                <p-radioButton value="7" label="7" [(ngModel)]="selectedValuesPersonality[1]"></p-radioButton>&nbsp;
+                &nbsp;&nbsp; ไม่เห็นด้วย
+              </div>
+            </div>
+
+            <!-- //////////////////  3  ///////////////////  -->
+            <div class="ui-g-12" style="padding: 0.2em;">
+              <div class="ui-g-6" style="text-align:right;">
+                <b><label>{{getAllPersonality[2].personality_name_th}}</label></b> &nbsp;&nbsp;
+              </div>
+              <div class="ui-g-6" style="text-align:left;">
+                เห็นด้วย &nbsp;&nbsp;
+                <p-radioButton value="1" label="1" [(ngModel)]="selectedValuesPersonality[2]"></p-radioButton>&nbsp;
+                <p-radioButton value="2" label="2" [(ngModel)]="selectedValuesPersonality[2]"></p-radioButton>&nbsp;
+                <p-radioButton value="3" label="3" [(ngModel)]="selectedValuesPersonality[2]"></p-radioButton>&nbsp;
+                <p-radioButton value="4" label="4" [(ngModel)]="selectedValuesPersonality[2]"></p-radioButton>&nbsp;
+                <p-radioButton value="5" label="5" [(ngModel)]="selectedValuesPersonality[2]"></p-radioButton>&nbsp;
+                <p-radioButton value="6" label="6" [(ngModel)]="selectedValuesPersonality[2]"></p-radioButton>&nbsp;
+                <p-radioButton value="7" label="7" [(ngModel)]="selectedValuesPersonality[2]"></p-radioButton>&nbsp;
+                &nbsp;&nbsp; ไม่เห็นด้วย
+              </div>
+            </div>
+
+            <!-- //////////////////  4  ///////////////////  -->
+            <div class="ui-g-12" style="padding: 0.2em;">
+              <div class="ui-g-6" style="text-align:right;">
+                <b><label>{{getAllPersonality[3].personality_name_th}}</label></b> &nbsp;&nbsp;
+              </div>
+              <div class="ui-g-6" style="text-align:left;">
+                เห็นด้วย &nbsp;&nbsp;
+                <p-radioButton value="1" label="1" [(ngModel)]="selectedValuesPersonality[3]"></p-radioButton>&nbsp;
+                <p-radioButton value="2" label="2" [(ngModel)]="selectedValuesPersonality[3]"></p-radioButton>&nbsp;
+                <p-radioButton value="3" label="3" [(ngModel)]="selectedValuesPersonality[3]"></p-radioButton>&nbsp;
+                <p-radioButton value="4" label="4" [(ngModel)]="selectedValuesPersonality[3]"></p-radioButton>&nbsp;
+                <p-radioButton value="5" label="5" [(ngModel)]="selectedValuesPersonality[3]"></p-radioButton>&nbsp;
+                <p-radioButton value="6" label="6" [(ngModel)]="selectedValuesPersonality[3]"></p-radioButton>&nbsp;
+                <p-radioButton value="7" label="7" [(ngModel)]="selectedValuesPersonality[3]"></p-radioButton>&nbsp;
+                &nbsp;&nbsp; ไม่เห็นด้วย
+              </div>
+            </div>
+
+            <!-- //////////////////  5  ///////////////////  -->
+            <div class="ui-g-12" style="padding: 0.2em;">
+              <div class="ui-g-6" style="text-align:right;">
+                <b><label>{{getAllPersonality[4].personality_name_th}}</label></b> &nbsp;&nbsp;
+              </div>
+              <div class="ui-g-6" style="text-align:left;">
+                เห็นด้วย &nbsp;&nbsp;
+                <p-radioButton value="1" label="1" [(ngModel)]="selectedValuesPersonality[4]"></p-radioButton>&nbsp;
+                <p-radioButton value="2" label="2" [(ngModel)]="selectedValuesPersonality[4]"></p-radioButton>&nbsp;
+                <p-radioButton value="3" label="3" [(ngModel)]="selectedValuesPersonality[4]"></p-radioButton>&nbsp;
+                <p-radioButton value="4" label="4" [(ngModel)]="selectedValuesPersonality[4]"></p-radioButton>&nbsp;
+                <p-radioButton value="5" label="5" [(ngModel)]="selectedValuesPersonality[4]"></p-radioButton>&nbsp;
+                <p-radioButton value="6" label="6" [(ngModel)]="selectedValuesPersonality[4]"></p-radioButton>&nbsp;
+                <p-radioButton value="7" label="7" [(ngModel)]="selectedValuesPersonality[4]"></p-radioButton>&nbsp;
+                &nbsp;&nbsp; ไม่เห็นด้วย
+              </div>
+            </div>
+
+            <!-- //////////////////  6  ///////////////////  -->
+            <div class="ui-g-12" style="padding: 0.2em;">
+              <div class="ui-g-6" style="text-align:right;">
+                <b><label>{{getAllPersonality[5].personality_name_th}}</label></b> &nbsp;&nbsp;
+              </div>
+              <div class="ui-g-6" style="text-align:left;">
+                เห็นด้วย &nbsp;&nbsp;
+                <p-radioButton value="1" label="1" [(ngModel)]="selectedValuesPersonality[5]"></p-radioButton>&nbsp;
+                <p-radioButton value="2" label="2" [(ngModel)]="selectedValuesPersonality[5]"></p-radioButton>&nbsp;
+                <p-radioButton value="3" label="3" [(ngModel)]="selectedValuesPersonality[5]"></p-radioButton>&nbsp;
+                <p-radioButton value="4" label="4" [(ngModel)]="selectedValuesPersonality[5]"></p-radioButton>&nbsp;
+                <p-radioButton value="5" label="5" [(ngModel)]="selectedValuesPersonality[5]"></p-radioButton>&nbsp;
+                <p-radioButton value="6" label="6" [(ngModel)]="selectedValuesPersonality[5]"></p-radioButton>&nbsp;
+                <p-radioButton value="7" label="7" [(ngModel)]="selectedValuesPersonality[5]"></p-radioButton>&nbsp;
+                &nbsp;&nbsp; ไม่เห็นด้วย
+              </div>
+            </div>
+
+            <!-- //////////////////  7  ///////////////////  -->
+            <div class="ui-g-12" style="padding: 0.2em;">
+              <div class="ui-g-6" style="text-align:right;">
+                <b><label>{{getAllPersonality[6].personality_name_th}}</label></b> &nbsp;&nbsp;
+              </div>
+              <div class="ui-g-6" style="text-align:left;">
+                เห็นด้วย &nbsp;&nbsp;
+                <p-radioButton value="1" label="1" [(ngModel)]="selectedValuesPersonality[6]"></p-radioButton>&nbsp;
+                <p-radioButton value="2" label="2" [(ngModel)]="selectedValuesPersonality[6]"></p-radioButton>&nbsp;
+                <p-radioButton value="3" label="3" [(ngModel)]="selectedValuesPersonality[6]"></p-radioButton>&nbsp;
+                <p-radioButton value="4" label="4" [(ngModel)]="selectedValuesPersonality[6]"></p-radioButton>&nbsp;
+                <p-radioButton value="5" label="5" [(ngModel)]="selectedValuesPersonality[6]"></p-radioButton>&nbsp;
+                <p-radioButton value="6" label="6" [(ngModel)]="selectedValuesPersonality[6]"></p-radioButton>&nbsp;
+                <p-radioButton value="7" label="7" [(ngModel)]="selectedValuesPersonality[6]"></p-radioButton>&nbsp;
+                &nbsp;&nbsp; ไม่เห็นด้วย
+              </div>
+            </div>
+
+            <!-- //////////////////  8  ///////////////////  -->
+            <div class="ui-g-12" style="padding: 0.2em;">
+              <div class="ui-g-6" style="text-align:right;">
+                <b><label>{{getAllPersonality[7].personality_name_th}}</label></b> &nbsp;&nbsp;
+              </div>
+              <div class="ui-g-6" style="text-align:left;">
+                เห็นด้วย &nbsp;&nbsp;
+                <p-radioButton value="1" label="1" [(ngModel)]="selectedValuesPersonality[7]"></p-radioButton>&nbsp;
+                <p-radioButton value="2" label="2" [(ngModel)]="selectedValuesPersonality[7]"></p-radioButton>&nbsp;
+                <p-radioButton value="3" label="3" [(ngModel)]="selectedValuesPersonality[7]"></p-radioButton>&nbsp;
+                <p-radioButton value="4" label="4" [(ngModel)]="selectedValuesPersonality[7]"></p-radioButton>&nbsp;
+                <p-radioButton value="5" label="5" [(ngModel)]="selectedValuesPersonality[7]"></p-radioButton>&nbsp;
+                <p-radioButton value="6" label="6" [(ngModel)]="selectedValuesPersonality[7]"></p-radioButton>&nbsp;
+                <p-radioButton value="7" label="7" [(ngModel)]="selectedValuesPersonality[7]"></p-radioButton>&nbsp;
+                &nbsp;&nbsp; ไม่เห็นด้วย
+              </div>
+            </div>
+
+            <!-- //////////////////  9  ///////////////////  -->
+            <div class="ui-g-12" style="padding: 0.2em;">
+              <div class="ui-g-6" style="text-align:right;">
+                <b><label>{{getAllPersonality[8].personality_name_th}}</label></b> &nbsp;&nbsp;
+              </div>
+              <div class="ui-g-6" style="text-align:left;">
+                เห็นด้วย &nbsp;&nbsp;
+                <p-radioButton value="1" label="1" [(ngModel)]="selectedValuesPersonality[8]"></p-radioButton>&nbsp;
+                <p-radioButton value="2" label="2" [(ngModel)]="selectedValuesPersonality[8]"></p-radioButton>&nbsp;
+                <p-radioButton value="3" label="3" [(ngModel)]="selectedValuesPersonality[8]"></p-radioButton>&nbsp;
+                <p-radioButton value="4" label="4" [(ngModel)]="selectedValuesPersonality[8]"></p-radioButton>&nbsp;
+                <p-radioButton value="5" label="5" [(ngModel)]="selectedValuesPersonality[8]"></p-radioButton>&nbsp;
+                <p-radioButton value="6" label="6" [(ngModel)]="selectedValuesPersonality[8]"></p-radioButton>&nbsp;
+                <p-radioButton value="7" label="7" [(ngModel)]="selectedValuesPersonality[8]"></p-radioButton>&nbsp;
+                &nbsp;&nbsp; ไม่เห็นด้วย
+              </div>
+            </div>
+
+            <!-- //////////////////  10  ///////////////////  -->
+            <div class="ui-g-12" style="padding: 0.2em;">
+              <div class="ui-g-6" style="text-align:right;">
+                <b><label>{{getAllPersonality[9].personality_name_th}}</label></b> &nbsp;&nbsp;
+              </div>
+              <div class="ui-g-6" style="text-align:left;">
+                เห็นด้วย &nbsp;&nbsp;
+                <p-radioButton value="1" label="1" [(ngModel)]="selectedValuesPersonality[9]"></p-radioButton>&nbsp;
+                <p-radioButton value="2" label="2" [(ngModel)]="selectedValuesPersonality[9]"></p-radioButton>&nbsp;
+                <p-radioButton value="3" label="3" [(ngModel)]="selectedValuesPersonality[9]"></p-radioButton>&nbsp;
+                <p-radioButton value="4" label="4" [(ngModel)]="selectedValuesPersonality[9]"></p-radioButton>&nbsp;
+                <p-radioButton value="5" label="5" [(ngModel)]="selectedValuesPersonality[9]"></p-radioButton>&nbsp;
+                <p-radioButton value="6" label="6" [(ngModel)]="selectedValuesPersonality[9]"></p-radioButton>&nbsp;
+                <p-radioButton value="7" label="7" [(ngModel)]="selectedValuesPersonality[9]"></p-radioButton>&nbsp;
+                &nbsp;&nbsp; ไม่เห็นด้วย
+              </div>
+            </div>
+
+            <!-- //////////////////  11 ///////////////////  -->
+            <div class="ui-g-12" style="padding: 0.2em;">
+              <div class="ui-g-6" style="text-align:right;">
+                <b><label>{{getAllPersonality[10].personality_name_th}}</label></b> &nbsp;&nbsp;
+              </div>
+              <div class="ui-g-6" style="text-align:left;">
+                เห็นด้วย &nbsp;&nbsp;
+                <p-radioButton value="1" label="1" [(ngModel)]="selectedValuesPersonality[10]"></p-radioButton>&nbsp;
+                <p-radioButton value="2" label="2" [(ngModel)]="selectedValuesPersonality[10]"></p-radioButton>&nbsp;
+                <p-radioButton value="3" label="3" [(ngModel)]="selectedValuesPersonality[10]"></p-radioButton>&nbsp;
+                <p-radioButton value="4" label="4" [(ngModel)]="selectedValuesPersonality[10]"></p-radioButton>&nbsp;
+                <p-radioButton value="5" label="5" [(ngModel)]="selectedValuesPersonality[10]"></p-radioButton>&nbsp;
+                <p-radioButton value="6" label="6" [(ngModel)]="selectedValuesPersonality[10]"></p-radioButton>&nbsp;
+                <p-radioButton value="7" label="7" [(ngModel)]="selectedValuesPersonality[10]"></p-radioButton>&nbsp;
+                &nbsp;&nbsp; ไม่เห็นด้วย
+              </div>
+            </div>
+
+            <!-- //////////////////  12  ///////////////////  -->
+            <div class="ui-g-12" style="padding: 0.2em;">
+              <div class="ui-g-6" style="text-align:right;">
+                <b><label>{{getAllPersonality[11].personality_name_th}}</label></b> &nbsp;&nbsp;
+              </div>
+              <div class="ui-g-6" style="text-align:left;">
+                เห็นด้วย &nbsp;&nbsp;
+                <p-radioButton value="1" label="1" [(ngModel)]="selectedValuesPersonality[11]"></p-radioButton>&nbsp;
+                <p-radioButton value="2" label="2" [(ngModel)]="selectedValuesPersonality[11]"></p-radioButton>&nbsp;
+                <p-radioButton value="3" label="3" [(ngModel)]="selectedValuesPersonality[11]"></p-radioButton>&nbsp;
+                <p-radioButton value="4" label="4" [(ngModel)]="selectedValuesPersonality[11]"></p-radioButton>&nbsp;
+                <p-radioButton value="5" label="5" [(ngModel)]="selectedValuesPersonality[11]"></p-radioButton>&nbsp;
+                <p-radioButton value="6" label="6" [(ngModel)]="selectedValuesPersonality[11]"></p-radioButton>&nbsp;
+                <p-radioButton value="7" label="7" [(ngModel)]="selectedValuesPersonality[11]"></p-radioButton>&nbsp;
+                &nbsp;&nbsp; ไม่เห็นด้วย
+              </div>
+            </div>
+
+            <!-- //////////////////  13  ///////////////////  -->
+            <div class="ui-g-12" style="padding: 0.2em;">
+              <div class="ui-g-6" style="text-align:right;">
+                <b><label>{{getAllPersonality[12].personality_name_th}}</label></b> &nbsp;&nbsp;
+              </div>
+              <div class="ui-g-6" style="text-align:left;">
+                เห็นด้วย &nbsp;&nbsp;
+                <p-radioButton value="1" label="1" [(ngModel)]="selectedValuesPersonality[12]"></p-radioButton>&nbsp;
+                <p-radioButton value="2" label="2" [(ngModel)]="selectedValuesPersonality[12]"></p-radioButton>&nbsp;
+                <p-radioButton value="3" label="3" [(ngModel)]="selectedValuesPersonality[12]"></p-radioButton>&nbsp;
+                <p-radioButton value="4" label="4" [(ngModel)]="selectedValuesPersonality[12]"></p-radioButton>&nbsp;
+                <p-radioButton value="5" label="5" [(ngModel)]="selectedValuesPersonality[12]"></p-radioButton>&nbsp;
+                <p-radioButton value="6" label="6" [(ngModel)]="selectedValuesPersonality[12]"></p-radioButton>&nbsp;
+                <p-radioButton value="7" label="7" [(ngModel)]="selectedValuesPersonality[12]"></p-radioButton>&nbsp;
+                &nbsp;&nbsp; ไม่เห็นด้วย
+              </div>
+            </div>
+
+            <!-- //////////////////  14  ///////////////////  -->
+            <div class="ui-g-12" style="padding: 0.2em;">
+              <div class="ui-g-6" style="text-align:right;">
+                <b><label>{{getAllPersonality[13].personality_name_th}}</label></b> &nbsp;&nbsp;
+              </div>
+              <div class="ui-g-6" style="text-align:left;">
+                เห็นด้วย &nbsp;&nbsp;
+                <p-radioButton value="1" label="1" [(ngModel)]="selectedValuesPersonality[13]"></p-radioButton>&nbsp;
+                <p-radioButton value="2" label="2" [(ngModel)]="selectedValuesPersonality[13]"></p-radioButton>&nbsp;
+                <p-radioButton value="3" label="3" [(ngModel)]="selectedValuesPersonality[13]"></p-radioButton>&nbsp;
+                <p-radioButton value="4" label="4" [(ngModel)]="selectedValuesPersonality[13]"></p-radioButton>&nbsp;
+                <p-radioButton value="5" label="5" [(ngModel)]="selectedValuesPersonality[13]"></p-radioButton>&nbsp;
+                <p-radioButton value="6" label="6" [(ngModel)]="selectedValuesPersonality[13]"></p-radioButton>&nbsp;
+                <p-radioButton value="7" label="7" [(ngModel)]="selectedValuesPersonality[13]"></p-radioButton>&nbsp;
+                &nbsp;&nbsp; ไม่เห็นด้วย
+              </div>
+            </div>
+
+            <!-- //////////////////  15  ///////////////////  -->
+            <div class="ui-g-12" style="padding: 0.2em;">
+              <div class="ui-g-6" style="text-align:right;">
+                <b><label>{{getAllPersonality[14].personality_name_th}}</label></b> &nbsp;&nbsp;
+              </div>
+              <div class="ui-g-6" style="text-align:left;">
+                เห็นด้วย &nbsp;&nbsp;
+                <p-radioButton value="1" label="1" [(ngModel)]="selectedValuesPersonality[14]"></p-radioButton>&nbsp;
+                <p-radioButton value="2" label="2" [(ngModel)]="selectedValuesPersonality[14]"></p-radioButton>&nbsp;
+                <p-radioButton value="3" label="3" [(ngModel)]="selectedValuesPersonality[14]"></p-radioButton>&nbsp;
+                <p-radioButton value="4" label="4" [(ngModel)]="selectedValuesPersonality[14]"></p-radioButton>&nbsp;
+                <p-radioButton value="5" label="5" [(ngModel)]="selectedValuesPersonality[14]"></p-radioButton>&nbsp;
+                <p-radioButton value="6" label="6" [(ngModel)]="selectedValuesPersonality[14]"></p-radioButton>&nbsp;
+                <p-radioButton value="7" label="7" [(ngModel)]="selectedValuesPersonality[14]"></p-radioButton>&nbsp;
+                &nbsp;&nbsp; ไม่เห็นด้วย
+              </div>
+            </div>
+
+          </div>
+        </p-card>
+
+
+      </p-card>
+    </div>
+
+    <!-- ///////////////////////////////////// DISPLAY RESULT SECTION /////////////////////////////////////  -->
+
+    <div
+      *ngIf="!showSectionSkillBase && !showSectionBasicSubject && !showSectionPersonality && showSectionDisplayResult">
+      <p-card>
+        <br><br>
+        <div class="text-center">
+          <h1>PREDICT RESULT</h1>
+        </div>
+        <br><br>
+
+
+        <p-card>
+          <div class="ui-g">
+            <div class="ui-g-2"></div>
+            <div class="ui-g-8" style="text-align: center;">
+              <b>
+                <p style="font-size: large;">การแนะนำโดยอ้างอิงจากความรู้พื้นฐาน (Basic Subject)</p>
+                <p style="font-size: large;">สาขาวิชาที่มีเปอร์เซ็นความเหมาะสมกับคุณมากที่สุดเป็น {{resultMatchMajor}}
+                </p>
+              </b><br>
+              <label>Computer Science (CS) {{resultPredict_major_percentage_cs | number : '1.2-2'}} %</label><br>
+              <label>Information Technology (IT) {{resultPredict_major_percentage_it | number : '1.2-2'}} %</label><br>
+              <label>Computer Engineer (CE) {{resultPredict_major_percentage_ce | number : '1.2-2'}} %</label><br>
+              <label>Software Engineer (SE) {{resultPredict_major_percentage_se | number : '1.2-2'}} %</label><br>
+              <label>Business Computer (BC) {{resultPredict_major_percentage_bc | number : '1.2-2'}} %</label><br>
+            </div>
+            <div class="ui-g-2"></div>
+          </div>
+
+          <div class="ui-g">
+            <div class="ui-g-2"></div>
+            <div class="ui-g-8">
+              <p-chart type="bar" [data]="basicData1" [options]="horizontalOptions"></p-chart>
+            </div>
+            <div class="ui-g-2"></div>
+          </div>
+
+          <br>
+          <br>
+          <p-card>
+            <div class="ui-g">
+              <div class="ui-g-2"></div>
+              <div class="ui-g-8" style="text-align: center;">
+                <b>
+                  <h2>วิชาที่ควรเรียนเพิ่มในแต่ละสาขาวิชา</h2>
+                </b>
+
+              </div>
+              <div class="ui-g-2"></div>
+            </div>
+            <div class="ui-g">
+              <div class="ui-g-2" style="width:20% !important;">
+                <p-panel header="Computer Science (CS)">
+                  <div *ngFor="let row of resultPredict.subject_request_data_cs[1]">
+                    <label>{{row}}</label>
+                  </div>
+                </p-panel>
+              </div>
+              <div class="ui-g-2" style="width:20% !important;">
+                <p-panel header="Information Technology (IT) ">
+                  <div *ngFor="let row of resultPredict.subject_request_data_it[1]">
+                    <label>{{row}}</label>
+                  </div>
+                </p-panel>
+              </div>
+              <div class="ui-g-2" style="width:20% !important;">
+                <p-panel header="Computer Engineer (CE)">
+                  <div *ngFor="let row of resultPredict.subject_request_data_ce[1]">
+                    <label>{{row}}</label>
+                  </div>
+                </p-panel>
+              </div>
+              <div class="ui-g-2" style="width:20% !important;">
+                <p-panel header="Software Engineer (SE)">
+                  <div *ngFor="let row of resultPredict.subject_request_data_se[1]">
+                    <label>{{row}}</label>
+                  </div>
+                </p-panel>
+              </div>
+              <div class="ui-g-2" style="width:20% !important;">
+                <p-panel header="Business Computer (BC)">
+                  <div *ngFor="let row of resultPredict.subject_request_data_bc[1]">
+                    <label>{{row}}</label>
+                  </div>
+                </p-panel>
+              </div>
+            </div>
+          </p-card>
+
+          <br>
+          <p-card>
+            <div class="ui-g">
+              <div class="ui-g-2"></div>
+              <div class="ui-g-8" style="text-align: center;">
+                <b>
+                  <h2>สายอาชีพในแต่ละสาขาวิชา</h2>
+                </b>
+              </div>
+              <div class="ui-g-2"></div>
+            </div>
+            <div class="ui-g">
+              <div class="ui-g-2" style="width:20% !important;">
+                <p-panel header="Computer Science (CS)">
+                  <div *ngFor="let row of resultPredict.major_job_result[0][1]">
+                    <label>{{row}}</label>
+                  </div>
+                </p-panel>
+              </div>
+              <div class="ui-g-2" style="width:20% !important;">
+                <p-panel header="Information Technology (IT) ">
+                  <div *ngFor="let row of resultPredict.major_job_result[1][1]">
+                    <label>{{row}}</label>
+                  </div>
+                </p-panel>
+              </div>
+              <div class="ui-g-2" style="width:20% !important;">
+                <p-panel header="Computer Engineer (CE)">
+                  <div *ngFor="let row of resultPredict.major_job_result[2][1]">
+                    <label>{{row}}</label>
+                  </div>
+                </p-panel>
+              </div>
+              <div class="ui-g-2" style="width:20% !important;">
+                <p-panel header="Software Engineer (SE)">
+                  <div *ngFor="let row of resultPredict.major_job_result[3][1]">
+                    <label>{{row}}</label>
+                  </div>
+                </p-panel>
+              </div>
+              <div class="ui-g-2" style="width:20% !important;">
+                <p-panel header="Business Computer (BC)">
+                  <div *ngFor="let row of resultPredict.major_job_result[4][1]">
+                    <label>{{row}}</label>
+                  </div>
+                </p-panel>
+              </div>
+            </div>
+          </p-card>
+
+          <br>
+          <p-card>
+            <div class="ui-g">
+              <div class="ui-g-2"></div>
+              <div class="ui-g-8" style="text-align: center;">
+                <b>
+                  <p style="font-size: large;">การแนะนำโดยอ้างอิงจากทักษะความสามารถ (Skill Base)</p>
+                  <p style="font-size: large;">สาขาวิชาที่มีเปอร์เซ็นความเหมาะสมกับคุณมากที่สุดเป็น {{resultMatchSkill}}
+                  </p>
+                </b><br>
+                <label>Computer Science (CS) {{resultPredict_skill_percentage_cs | number : '1.2-2'}} %</label><br>
+                <label>Information Technology (IT) {{resultPredict_skill_percentage_it}} %</label><br>
+                <label>Computer Engineer (CE) {{resultPredict_skill_percentage_ce | number : '1.2-2'}} %</label><br>
+                <label>Software Engineer (SE) {{resultPredict_skill_percentage_se | number : '1.2-2'}} %</label><br>
+                <label>Business Computer (BC) {{resultPredict_skill_percentage_bc | number : '1.2-2'}} %</label><br>
+              </div>
+              <div class="ui-g-2"></div>
+            </div>
+            <div class="ui-g">
+              <div class="ui-g-2"></div>
+              <div class="ui-g-8">
+                <p-chart type="bar" [data]="basicData2" [options]="horizontalOptions"></p-chart>
+              </div>
+              <div class="ui-g-2"></div>
+            </div><br>
+
+            <div class="ui-g">
+              <div class="ui-g-2"></div>
+              <div class="ui-g-8" style="text-align: center;">
+                <b>
+                  <h2>ทักษะความสามารถที่ควรมีในแต่ละสาขาวิชา</h2>
+                </b>
+              </div>
+              <div class="ui-g-2"></div>
+            </div>
+            <div class="ui-g">
+              <div class="ui-g-2" style="width:20% !important;">
+                <p-panel header="Computer Science (CS)">
+                  <div *ngFor="let row of resultPredict.skill_request_cs[1]">
+                    <label>{{row}}</label>
+                  </div>
+                </p-panel>
+              </div>
+              <div class="ui-g-2" style="width:20% !important;">
+                <p-panel header="Information Technology (IT) ">
+                  <div *ngFor="let row of resultPredict.skill_request_it[1]">
+                    <label>{{row}}</label>
+                  </div>
+                </p-panel>
+              </div>
+              <div class="ui-g-2" style="width:20% !important;">
+                <p-panel header="Computer Engineer (CE)">
+                  <div *ngFor="let row of resultPredict.skill_request_ce[1]">
+                    <label>{{row}}</label>
+                  </div>
+                </p-panel>
+              </div>
+              <div class="ui-g-2" style="width:20% !important;">
+                <p-panel header="Software Engineer (SE)">
+                  <div *ngFor="let row of resultPredict.skill_request_se[1]">
+                    <label>{{row}}</label>
+                  </div>
+                </p-panel>
+              </div>
+              <div class="ui-g-2" style="width:20% !important;">
+                <p-panel header="Business Computer (BC)">
+                  <div *ngFor="let row of resultPredict.skill_request_bc[1]">
+                    <label>{{row}}</label>
+                  </div>
+                </p-panel>
+              </div>
+            </div>
+          </p-card>
+
+          <br>
+          <p-card>
+            <div class="ui-g">
+              <div class="ui-g-2"></div>
+              <div class="ui-g-8" style="text-align: center;">
+                <b>
+                  <p style="font-size: large;">การแนะนำโดยอ้างอิงจากบุคลิกภาพ (Personality)</p>
+                  <p style="font-size: large;">คุณมีเปอร์เซ็นเหมาะสมกับสาขาวิชาด้านคอมพิวเตอร์เป็น
+                    {{resultMatchPersonality | number : '1.2-2'}} %</p>
+                </b><br>
+                <!-- <label>Computer Science (CS) {{resultPredict_skill_percentage_cs | number : '1.2-2'}} %</label><br>
+                <label>Information Technology (IT) {{resultPredict_skill_percentage_it}} %</label><br>
+                <label>Computer Engineer (CE) {{resultPredict_skill_percentage_ce | number : '1.2-2'}} %</label><br>
+                <label>Software Engineer (SE) {{resultPredict_skill_percentage_se | number : '1.2-2'}} %</label><br>
+                <label>Business Computer (BC) {{resultPredict_skill_percentage_bc | number : '1.2-2'}} %</label><br> -->
+              </div>
+              <div class="ui-g-2"></div>
+            </div>
+            <div class="ui-g">
+              <div class="ui-g-2"></div>
+              <div class="ui-g-8">
+                <p-chart type="doughnut" [data]="basicData3"></p-chart>
+              </div>
+              <div class="ui-g-2"></div>
+            </div><br>
+          </p-card>
+
+
+
+        </p-card>
+
+
+      </p-card>
+    </div>
+
+  </div>
+</div>
+<p-toast></p-toast>
